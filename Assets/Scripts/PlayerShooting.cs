@@ -1,34 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour{
-    
-    private Quaternion direction;
-    public float attackSpeed = 0.25f;
-    private float timeFromLastAttack;
-    public GameObject bullet;
-    private Vector3 positionToSpawn;
-    void FixedUpdate(){
-        positionToSpawn = transform.position;
-        timeFromLastAttack += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.LeftArrow)){
-            direction = Quaternion.Euler(0, 0, 180);
-            positionToSpawn.x -= 0.7f;
-        } else if (Input.GetKeyDown(KeyCode.UpArrow)){
-            direction = Quaternion.Euler(0, 0, 90);
-            positionToSpawn.y += 0.7f;
-        } else if (Input.GetKeyDown(KeyCode.RightArrow)){
-            direction = Quaternion.Euler(0, 0, 0);
-            positionToSpawn.x += 0.7f;
-        } else if (Input.GetKeyDown(KeyCode.DownArrow)){
-            direction = Quaternion.Euler(0, 0, -90);
-            positionToSpawn.y -= 0.7f;
-        } else {return;}
+    public Transform firePoint;
+    public GameObject bulletPrefab;
 
-        if (timeFromLastAttack > 1 / attackSpeed){
-            Instantiate(bullet, transform.position, direction);
-            timeFromLastAttack = 0;
+    public float bulletForce = 5f;
+    public float attackSpeed = 2f;
+    private float timeFromLastAttack = 0f;
+
+    private void Start(){
+        timeFromLastAttack = 1 / attackSpeed;
+    }
+
+    private void Update(){
+        if (Input.GetButtonDown("Fire1") && timeFromLastAttack > 1/attackSpeed){
+            Shoot();
         }
+        timeFromLastAttack += Time.deltaTime;
+    }
+
+    void Shoot(){
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        timeFromLastAttack = 0;
     }
 }
