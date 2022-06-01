@@ -30,9 +30,7 @@ public class PlayerController : MonoBehaviour{
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        print(other.name);
         if (other.CompareTag("Doors")){
-            Debug.Log(other.GetComponent<Door>().room.transform.position);
             Vector3 position = other.GetComponent<Door>().room.transform.position;
             position.z = -10f;
             cam.transform.position = position;

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8995749614525796364}
   - component: {fileID: -2791134232184468066}
+  - component: {fileID: 6202205346200522009}
   m_Layer: 0
   m_Name: ClosedRoom
   m_TagString: Untagged
@@ -43,6 +44,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2ff31a44af9d954795144e02773689c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6202205346200522009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537548642043389353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b84dd6900b85a74dad83cd61a1c05da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1571650845462050506

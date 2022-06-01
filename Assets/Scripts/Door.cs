@@ -7,11 +7,10 @@ using UnityEngine;
 public class Door : MonoBehaviour{
     public GameObject room;
 
-    private void OnTriggerEnter(Collider other){
-        print(other.name);
-        if (other.CompareTag("Player")){
-            Debug.Log(room.transform.position);
-            Camera.main.transform.position = room.transform.position;
+    private void OnTriggerExit2D(Collider2D other){
+        Debug.Log(!room.GetComponent<Room>().isClear);
+        if (!room.GetComponent<Room>().isClear){
+            room.GetComponent<Room>().CloseDoors();
         }
     }
 }
