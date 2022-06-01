@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour{
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour{
 
     private void OnCollisionEnter2D(Collision2D other){
         if (other.gameObject.CompareTag("Bullet")){
+            Destroy(other.gameObject);
             health -= player.attackDamage;
             if (health <= 0){
                 player.enemiesInRoom -= 1;
