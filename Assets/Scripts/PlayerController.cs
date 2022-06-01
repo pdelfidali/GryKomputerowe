@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour{
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Camera cam;
+
+    public GameObject currentRoom;
     
     
     private Vector2 movement;
@@ -31,7 +33,8 @@ public class PlayerController : MonoBehaviour{
 
     private void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Doors")){
-            Vector3 position = other.GetComponent<Door>().room.transform.position;
+            currentRoom = other.GetComponent<Door>().room;
+            Vector3 position = currentRoom.transform.position;
             position.z = -10f;
             cam.transform.position = position;
         }
