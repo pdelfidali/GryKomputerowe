@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour{
     public Rigidbody2D rb;
     
     private void OnCollisionEnter2D(Collision2D other){
-        if (other.gameObject.CompareTag("Walls")){
+        if (other.gameObject.CompareTag("Walls") || other.gameObject.CompareTag("Doors")){
             Destroy(gameObject);
         }
     }

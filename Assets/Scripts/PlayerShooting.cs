@@ -9,7 +9,9 @@ public class PlayerShooting : MonoBehaviour{
 
     public float bulletForce = 5f;
     public float attackSpeed = 2f;
+    public float attackDamage = 2f;
     private float timeFromLastAttack = 0f;
+    public int enemiesInRoom;
 
     private void Start(){
         timeFromLastAttack = 1 / attackSpeed;

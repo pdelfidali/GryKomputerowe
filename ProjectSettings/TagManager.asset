@@ -5,10 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpawnPoint
+  - Rooms
   - Doors
   - Bullet
   - Walls
-  - Templates
+  - Enemies
+  - Enemy
   layers:
   - Default
   - TransparentFX
