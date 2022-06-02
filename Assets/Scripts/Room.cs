@@ -8,6 +8,7 @@ public class Room : MonoBehaviour{
     public bool isClear = false;
     public List<BoxCollider2D> doors;
     private List<Enemy> enemies;
+    public List<GameObject> spawnPoints;
 
     private void Start(){
         enemies = GameObject.FindGameObjectWithTag("Enemies").GetComponent<EnemyTemplates>().enemies;
@@ -18,21 +19,38 @@ public class Room : MonoBehaviour{
             boxCollider2D.isTrigger = false;
             boxCollider2D.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
         }
+
         SpawnEnemies();
     }
 
     private void SpawnEnemies(){
-        int rand = Random.Range(0, enemies.Count);
-        Instantiate(enemies[rand], transform.position, enemies[rand].transform.rotation);
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerShooting>().enemiesInRoom = 1;
+        ShuffleSpawnPoints();
+        int amountOfEnemies = Random.Range(1, 5);
+        int i = 0;
+        while (i < amountOfEnemies){
+            int rand = Random.Range(0, enemies.Count);
+            Instantiate(enemies[rand], spawnPoints[i].transform.position, enemies[rand].transform.rotation);
+            i++;
+        }
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerShooting>().enemiesInRoom = amountOfEnemies;
     }
 
     public void OpenDoors(){
         foreach (var boxCollider2D in doors){
             boxCollider2D.isTrigger = true;
-            boxCollider2D.gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+            boxCollider2D.gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         }
 
         isClear = true;
+    }
+
+    private void ShuffleSpawnPoints(){
+        for (int i = 0; i < spawnPoints.Count; i++){
+            var temp = spawnPoints[i];
+            int randomIndex = Random.Range(i, spawnPoints.Count);
+            spawnPoints[i] = spawnPoints[randomIndex];
+            spawnPoints[randomIndex] = temp;
+        }
     }
 }
