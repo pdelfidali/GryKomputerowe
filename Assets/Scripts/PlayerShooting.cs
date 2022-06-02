@@ -12,6 +12,7 @@ public class PlayerShooting : MonoBehaviour{
     public float attackDamage = 2f;
     private float timeFromLastAttack = 0f;
     public int enemiesInRoom;
+    public float health = 10f;
 
     private void Start(){
         timeFromLastAttack = 1 / attackSpeed;
