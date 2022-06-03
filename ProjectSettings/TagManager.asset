@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - Templates
   - EnemyBullet
+  - Loot
   layers:
   - Default
   - TransparentFX

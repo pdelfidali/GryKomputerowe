@@ -907,7 +907,11 @@ MonoBehaviour:
   attackDamage: 2
   enemiesInRoom: 0
   health: 10
+  maxHealth: 10
   playerUI: {fileID: 1158565140}
+  lootPrefabs:
+  - {fileID: 1983059198286419761, guid: 7163567f4b9499b429da766531b19cf5, type: 3}
+  playerController: {fileID: 1158565134}
 --- !u!58 &1158565139
 CircleCollider2D:
   m_ObjectHideFlags: 0

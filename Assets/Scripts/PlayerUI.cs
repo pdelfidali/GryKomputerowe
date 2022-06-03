@@ -14,5 +14,6 @@ public class PlayerUI : MonoBehaviour{
         attackSpeed.text = player.attackSpeed.ToString();
         attackDamage.text = player.attackDamage.ToString();
         health.value = player.health;
+        health.maxValue = player.maxHealth;
     }
 }

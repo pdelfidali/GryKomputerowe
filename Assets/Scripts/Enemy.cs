@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour{
                 player.enemiesInRoom -= 1;
                 if (player.enemiesInRoom == 0){
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().currentRoom.GetComponent<Room>().OpenDoors();
+                    player.SpawnLoot();
                 }
                 Destroy(gameObject);
             }

@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerShooting : MonoBehaviour{
     public Transform firePoint;
@@ -13,7 +15,10 @@ public class PlayerShooting : MonoBehaviour{
     private float timeFromLastAttack = 0f;
     public int enemiesInRoom;
     public float health = 10f;
+    public float maxHealth = 10f;
     public PlayerUI playerUI;
+    public List<GameObject> lootPrefabs;
+    public PlayerController playerController;
 
     private void Start(){
         timeFromLastAttack = 1 / attackSpeed;
@@ -43,7 +48,21 @@ public class PlayerShooting : MonoBehaviour{
         if (other.gameObject.CompareTag("Enemy")){
             health -= other.gameObject.GetComponent<Enemy>().damage;
         }
+
+        if (other.gameObject.CompareTag("Loot")){
+            Loot loot = other.gameObject.GetComponent<Loot>();
+            attackSpeed += loot.attackSpeedModificator;
+            attackDamage += loot.attackDamageModificator;
+            health += loot.healthModificator;
+            maxHealth += loot.maxHealthModificator;
+            Destroy(other.gameObject);
+        }
         
         playerUI.UpdateUI();
+    }
+
+    public void SpawnLoot(){
+        int rand = Random.Range(0, lootPrefabs.Count);
+        Instantiate(lootPrefabs[rand], playerController.currentRoom.transform.position, Quaternion.identity);
     }
 }
