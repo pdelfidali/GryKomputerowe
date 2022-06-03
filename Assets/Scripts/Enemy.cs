@@ -42,11 +42,5 @@ public class Enemy : MonoBehaviour{
             }
         }
 
-        if (other.gameObject.CompareTag("Player")){
-            player.health -= damage;
-            if (player.health <= 0){
-                Debug.Log("GAME OVER!");
-            }
-        }
     }
 }

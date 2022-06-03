@@ -9,7 +9,6 @@ public class ShootingEnemy : MonoBehaviour
     
     public float bulletForce = 5f;
     public float attackSpeed = 2f;
-    public float attackDamage = 2f;
     private float timeFromLastAttack = 0f;
     
     private void Update(){

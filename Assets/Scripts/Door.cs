@@ -9,7 +9,6 @@ public class Door : MonoBehaviour{
 
     private void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("Player")){
-            Debug.Log(!room.GetComponent<Room>().isClear);
             if (!room.GetComponent<Room>().isClear){
                 room.GetComponent<Room>().CloseDoors();
             }
