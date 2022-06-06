@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour{
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
     }
-
-    private void OnTriggerEnter2D(Collider2D other){
+    
+    private void OnTriggerExit2D(Collider2D other){
         if (other.CompareTag("Doors")){
             currentRoom = other.GetComponent<Door>().room;
             Vector3 position = currentRoom.transform.position;

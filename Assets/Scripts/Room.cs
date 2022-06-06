@@ -9,6 +9,7 @@ public class Room : MonoBehaviour{
     public List<BoxCollider2D> doors;
     private List<Enemy> enemies;
     public List<GameObject> spawnPoints;
+    public Camera mainCamera;
 
     private void Start(){
         enemies = GameObject.FindGameObjectWithTag("Enemies").GetComponent<EnemyTemplates>().enemies;
