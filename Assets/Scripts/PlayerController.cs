@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour{
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Camera cam;
+    public Animator anim;
+    public float x, y;
+    public bool isMoving;
 
     public GameObject currentRoom;
     
@@ -21,6 +24,7 @@ public class PlayerController : MonoBehaviour{
         movement.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        animate();
     }
 
     private void FixedUpdate(){
@@ -28,7 +32,8 @@ public class PlayerController : MonoBehaviour{
 
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        // rb.rotation = angle;
+        rb.rotation = 0;
     }
     
     private void OnTriggerExit2D(Collider2D other){
@@ -37,6 +42,23 @@ public class PlayerController : MonoBehaviour{
             Vector3 position = currentRoom.transform.position;
             position.z = -10f;
             cam.transform.position = position;
+        }
+    }
+
+    private void animate()
+    {
+        x = Input.GetAxisRaw("Horizontal");
+        y = Input.GetAxisRaw("Vertical");
+
+        if (x != 0 || y != 0)
+        {
+            anim.SetFloat("X", x);
+            anim.SetFloat("Y", y);
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
         }
     }
 }
