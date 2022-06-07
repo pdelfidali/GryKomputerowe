@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour{
     public Rigidbody2D rb;
     public Camera cam;
     public Animator anim;
-    public float x, y;
-    public bool isMoving;
+
 
     public GameObject currentRoom;
     
@@ -47,13 +46,10 @@ public class PlayerController : MonoBehaviour{
 
     private void animate()
     {
-        x = Input.GetAxisRaw("Horizontal");
-        y = Input.GetAxisRaw("Vertical");
-
-        if (x != 0 || y != 0)
+        if (movement.x != 0 || movement.y != 0)
         {
-            anim.SetFloat("X", x);
-            anim.SetFloat("Y", y);
+            anim.SetFloat("X", movement.x);
+            anim.SetFloat("Y", movement.y);
             anim.SetBool("isMoving", true);
         }
         else
