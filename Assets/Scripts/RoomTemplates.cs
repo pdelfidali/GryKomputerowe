@@ -65,7 +65,7 @@ public class RoomTemplates : MonoBehaviour{
 
     private GameObject LastTop(List<GameObject> _level){
         for (int i = _level.Count - 1; i > 0; i--){
-            if (_level[i].name == "B(Clone)"){
+            if (_level[i].name is "B(Clone)" or "BL(Clone)" or "BR(Clone)"){
                 return _level[i];
             }
         }

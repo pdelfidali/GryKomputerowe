@@ -1781,7 +1781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 0.1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -1889,7 +1889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 0.1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -1901,7 +1901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 0.1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -1913,7 +1913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 0.1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -7888,23 +7888,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottomRooms:
-  - {fileID: 1431548713080005107, guid: 68e9ac80dd8bfab468e0aa7ecdaecdf2, type: 3}
   - {fileID: 2695177424356850169, guid: c93aa479d926ea3469f77ae0bd4cd9f5, type: 3}
   - {fileID: 3640480439791114861, guid: e062d11402c19b343a4790d60ef7d66a, type: 3}
   - {fileID: 4783872895134501883, guid: 67c27cbece0da1342b4a64e1386f634e, type: 3}
   topRooms:
-  - {fileID: 7925368505396939392, guid: 113ffb1d275b65f4b84f0f8da5b36ae3, type: 3}
   - {fileID: 7743238210895985914, guid: 8368b3b3b1708b24eb4c56fe75f884f1, type: 3}
   - {fileID: 6876158171596763846, guid: 9eb98480f172e6d4b92e2a593ad36f01, type: 3}
   - {fileID: 4783872895134501883, guid: 67c27cbece0da1342b4a64e1386f634e, type: 3}
   leftRooms:
   - {fileID: 7743238210895985914, guid: 8368b3b3b1708b24eb4c56fe75f884f1, type: 3}
   - {fileID: 3010332842817678418, guid: a69e5b874759075409d7fe327d241ce8, type: 3}
-  - {fileID: 7129702660955236550, guid: 5acae1e91ca339841935f3de178937dc, type: 3}
   - {fileID: 2695177424356850169, guid: c93aa479d926ea3469f77ae0bd4cd9f5, type: 3}
   rightRooms:
   - {fileID: 3640480439791114861, guid: e062d11402c19b343a4790d60ef7d66a, type: 3}
-  - {fileID: 8398414690192744627, guid: 0f726840603c74c4cb884ba504a9d988, type: 3}
   - {fileID: 3010332842817678418, guid: a69e5b874759075409d7fe327d241ce8, type: 3}
   - {fileID: 6876158171596763846, guid: 9eb98480f172e6d4b92e2a593ad36f01, type: 3}
   bottomClosed: {fileID: 1431548713080005107, guid: 68e9ac80dd8bfab468e0aa7ecdaecdf2, type: 3}
@@ -7929,12 +7925,12 @@ MonoBehaviour:
     - list: []
   level: 0
   floorColor:
-  - {r: 1, g: 0.06132078, b: 0.06132078, a: 1}
-  - {r: 0, g: 1, b: 0.016851187, a: 1}
-  - {r: 1, g: 0.86571354, b: 0, a: 1}
-  - {r: 0, g: 0.31783962, b: 1, a: 1}
-  - {r: 0, g: 0, b: 0, a: 1}
-  levelsWithBoss: 
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.26392388, g: 1, b: 0, a: 1}
+  levelsWithBoss: 00000000
 --- !u!4 &1913839768
 Transform:
   m_ObjectHideFlags: 0
@@ -8735,7 +8731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 4
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: waitTime
@@ -8835,7 +8831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 4
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: waitTime
@@ -8843,7 +8839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 4
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: waitTime
@@ -8851,7 +8847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 4
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: waitTime
@@ -9180,7 +9176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: waitTime
@@ -9284,7 +9280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: waitTime
@@ -9292,7 +9288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: waitTime
@@ -9300,7 +9296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: waitTime
