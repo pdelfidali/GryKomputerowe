@@ -18,12 +18,19 @@ public class PlayerController : MonoBehaviour{
     
     private Vector2 movement;
     private Vector2 mousePos;
+    private float waitTime = 0;
     
     
     void Update(){
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        animate();       
+        if (waitTime <= 0){
+            animate();  
+        }
+        else{
+            waitTime -= Time.deltaTime;
+        }
+             
         if (Input.GetButtonDown("Fire1")){
             mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             playerShooting.Shoot();
@@ -31,6 +38,7 @@ public class PlayerController : MonoBehaviour{
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
             anim.SetFloat("X", lookDir.x);
             anim.SetFloat("Y", lookDir.y);
+            waitTime = 0.25f;
         }
     }
 
