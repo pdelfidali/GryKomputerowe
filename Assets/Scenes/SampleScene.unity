@@ -2146,6 +2146,10 @@ PrefabInstance:
       propertyPath: delay
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1537774811178936722, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_TagString
       value: Walls
@@ -2242,13 +2246,25 @@ PrefabInstance:
       propertyPath: delay
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7002046107363830567, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -3911,9 +3927,9 @@ GameObject:
   - component: {fileID: 1158565134}
   - component: {fileID: 1158565133}
   - component: {fileID: 1158565138}
-  - component: {fileID: 1158565139}
   - component: {fileID: 1158565140}
   - component: {fileID: 1158565141}
+  - component: {fileID: 1158565142}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4052,22 +4068,6 @@ MonoBehaviour:
   lootPrefabs:
   - {fileID: 1983059198286419761, guid: 7163567f4b9499b429da766531b19cf5, type: 3}
   playerController: {fileID: 1158565134}
---- !u!58 &1158565139
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158565132}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &1158565140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4104,6 +4104,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &1158565142
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158565132}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.021911789, y: -0.46023792}
+  m_Size: {x: 0.5754816, y: 0.2102057}
+  m_Direction: 1
 --- !u!1 &1200338773
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,6 +4414,10 @@ PrefabInstance:
       propertyPath: delay
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1537774811178936722, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_TagString
       value: Walls
@@ -4494,13 +4514,25 @@ PrefabInstance:
       propertyPath: delay
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7002046107363830567, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -6128,6 +6160,10 @@ PrefabInstance:
       propertyPath: delay
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1537774811178936722, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_TagString
       value: Walls
@@ -6224,13 +6260,25 @@ PrefabInstance:
       propertyPath: delay
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7002046107363830567, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -6764,6 +6812,10 @@ PrefabInstance:
       propertyPath: delay
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1537774811178936722, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_TagString
       value: Walls
@@ -6860,12 +6912,24 @@ PrefabInstance:
       propertyPath: delay
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7002046107363830567, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
@@ -7193,6 +7257,10 @@ PrefabInstance:
       propertyPath: delay
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1537774811178936722, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_TagString
       value: Walls
@@ -7293,13 +7361,25 @@ PrefabInstance:
       propertyPath: delay
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: waitTime
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7002046107363830567, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_Tiles.Array.size

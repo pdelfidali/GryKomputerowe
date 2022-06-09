@@ -18,7 +18,7 @@ public class RoomSpawner : MonoBehaviour{
     private int rand;
     private bool spawned;
 
-    public float waitTime = 3f;
+    public float waitTime = 4f;
 
     public float delay;
 

@@ -1396,8 +1396,6 @@ MonoBehaviour:
   - {fileID: 8812029980165765640}
   - {fileID: 4218889509075214999}
   - {fileID: 2197815993864435413}
-  - {fileID: 0}
-  - {fileID: 0}
   mainCamera: {fileID: 0}
 --- !u!1 &1431548713435115387
 GameObject:
@@ -1858,6 +1856,7 @@ GameObject:
   - component: {fileID: 4618148367818468900}
   - component: {fileID: 4302499947695088484}
   - component: {fileID: 6037690725572220010}
+  - component: {fileID: 2607019173683617076}
   m_Layer: 0
   m_Name: Objects
   m_TagString: Untagged
@@ -2571,6 +2570,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &2607019173683617076
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611258498745487976}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &4961637194753875458
 GameObject:
   m_ObjectHideFlags: 0
