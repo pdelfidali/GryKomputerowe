@@ -75,14 +75,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 898388700, guid: 0a0a07d225174144784e9152f61df462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_AdaptiveModeThreshold: 0.631
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
@@ -105,9 +105,9 @@ BoxCollider2D:
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
+    adaptiveTilingThreshold: 0.631
     drawMode: 0
-    adaptiveTiling: 0
+    adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
@@ -1398,6 +1398,8 @@ MonoBehaviour:
   - {fileID: 2197815993864435413}
   mainCamera: {fileID: 0}
   floorColor: {fileID: 6964173001770434150}
+  spawnEnemies: 1
+  boss: {fileID: 0}
 --- !u!1 &1431548713435115387
 GameObject:
   m_ObjectHideFlags: 0
