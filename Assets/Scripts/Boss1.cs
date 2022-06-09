@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss1 : MonoBehaviour{
     public float cooldown;
@@ -9,6 +10,10 @@ public class Boss1 : MonoBehaviour{
     public GameObject bulletPrefab;
     [SerializeField] private Rigidbody2D playerRB;    
     public float bulletForce = 5f;
+    public Animator anim;
+    public Rigidbody2D boss;
+
+    private Vector2 direction;
 
     private void Start(){
         playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
@@ -17,6 +22,12 @@ public class Boss1 : MonoBehaviour{
     public void Activate(){
         Debug.Log("CHUJ");
         StartCoroutine(ShootAndWait());
+    }
+
+    private void Update()
+    {
+        direction = playerRB.position - boss.position;
+        animate();
     }
 
     IEnumerator ShootAndWait(){
@@ -29,5 +40,10 @@ public class Boss1 : MonoBehaviour{
             rb.AddForce((playerRB.position - rb.position).normalized * bulletForce, ForceMode2D.Impulse);
         }
         StartCoroutine(ShootAndWait());
+    }
+    private void animate()
+    {
+        anim.SetFloat("X", direction.x);
+        anim.SetFloat("Y", direction.y);
     }
 }
