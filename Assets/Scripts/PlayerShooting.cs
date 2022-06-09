@@ -19,6 +19,7 @@ public class PlayerShooting : MonoBehaviour{
     public PlayerUI playerUI;
     public List<GameObject> lootPrefabs;
     public PlayerController playerController;
+    public GameObject deadGUI;
 
     private void Start(){
         timeFromLastAttack = 1 / attackSpeed;
@@ -34,7 +35,7 @@ public class PlayerShooting : MonoBehaviour{
             var position = firePoint.position;
             GameObject bullet = Instantiate(bulletPrefab, position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce((mousePosition - (Vector2) position) * bulletForce, ForceMode2D.Impulse);
+            rb.AddForce((mousePosition - (Vector2) position).normalized * bulletForce, ForceMode2D.Impulse);
             timeFromLastAttack = 0;
         }
     }
@@ -42,7 +43,6 @@ public class PlayerShooting : MonoBehaviour{
     private void OnCollisionEnter2D(Collision2D other){
         if (other.gameObject.CompareTag("EnemyBullet")){
             health -= other.gameObject.GetComponent<Bullet>().attackDamage;
-            playerUI.UpdateUI();
         }
 
         if (other.gameObject.CompareTag("Enemy")){
@@ -56,6 +56,12 @@ public class PlayerShooting : MonoBehaviour{
             health += loot.healthModificator;
             maxHealth += loot.maxHealthModificator;
             Destroy(other.gameObject);
+        }
+
+        if (health <= 0){
+            Time.timeScale = 0;
+            deadGUI.SetActive(true);
+            playerUI.gameObject.SetActive(false);
         }
         
         playerUI.UpdateUI();
