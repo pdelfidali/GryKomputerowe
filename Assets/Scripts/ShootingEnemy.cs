@@ -13,6 +13,7 @@ public class ShootingEnemy : MonoBehaviour
     private float timeFromLastAttack = 0f;
     private Rigidbody2D playerRB;
     private Rigidbody2D rb;
+    private Vector2 direction;
     
     private void Start(){
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -23,19 +24,13 @@ public class ShootingEnemy : MonoBehaviour
             Shoot();
         }
         timeFromLastAttack += Time.deltaTime;
-    }
-
-    private void FixedUpdate(){
-        
-        Vector2 lookDir = playerRB.position - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        direction = playerRB.position - rb.position;
     }
 
     void Shoot(){
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        rb.AddForce(direction.normalized * bulletForce, ForceMode2D.Impulse);
         timeFromLastAttack = 0;
     }
 }
