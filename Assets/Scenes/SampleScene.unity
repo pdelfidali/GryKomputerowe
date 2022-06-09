@@ -3958,6 +3958,7 @@ MonoBehaviour:
   rb: {fileID: 1158565133}
   cam: {fileID: 519420031}
   anim: {fileID: 1158565141}
+  playerShooting: {fileID: 1158565138}
   currentRoom: {fileID: 0}
 --- !u!212 &1158565135
 SpriteRenderer:
@@ -6598,10 +6599,16 @@ MonoBehaviour:
   boss: {fileID: 1268695114772217291, guid: c9bdb111ac4fc47418f683921463e2b0, type: 3}
   levelList:
     list:
-    - list: []
-    - list: []
-    - list: []
-    - list: []
+    - list:
+      - {fileID: 762039736}
+    - list:
+      - {fileID: 1217408383}
+    - list:
+      - {fileID: 1904709045}
+    - list:
+      - {fileID: 191265455}
+    - list:
+      - {fileID: 1077993679}
     - list: []
   level: 0
 --- !u!4 &1913839768

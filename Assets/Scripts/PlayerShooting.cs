@@ -26,17 +26,16 @@ public class PlayerShooting : MonoBehaviour{
     }
 
     private void Update(){
-        if (Input.GetButtonDown("Fire1") && timeFromLastAttack > 1/attackSpeed){
-            Shoot();
-        }
         timeFromLastAttack += Time.deltaTime;
     }
 
-    void Shoot(){
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-        timeFromLastAttack = 0;
+    public void Shoot(){
+        if(timeFromLastAttack > 1/attackSpeed){
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+            timeFromLastAttack = 0;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other){

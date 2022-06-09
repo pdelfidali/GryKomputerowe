@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour{
     public Camera cam;
     public Animator anim;
 
+    public PlayerShooting playerShooting;
+
 
     public GameObject currentRoom;
     
@@ -21,18 +23,19 @@ public class PlayerController : MonoBehaviour{
     void Update(){
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        animate();
+        animate();       
+        if (Input.GetButtonDown("Fire1")){
+            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            playerShooting.Shoot();
+            Vector2 lookDir = mousePos - rb.position;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+            anim.SetFloat("X", lookDir.x);
+            anim.SetFloat("Y", lookDir.y);
+        }
     }
 
-    private void FixedUpdate(){
+    private void FixedUpdate(){ 
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.deltaTime));
-
-        Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        // rb.rotation = angle;
-        rb.rotation = 0;
     }
     
     private void OnTriggerExit2D(Collider2D other){
