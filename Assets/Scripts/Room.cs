@@ -12,6 +12,8 @@ public class Room : MonoBehaviour{
     public List<GameObject> spawnPoints;
     public Camera mainCamera;
     public Tilemap floorColor;
+    public bool spawnEnemies = true;
+    public GameObject boss;
 
     private void Start(){
         enemies = GameObject.FindGameObjectWithTag("Enemies").GetComponent<EnemyTemplates>().enemies;
@@ -22,8 +24,12 @@ public class Room : MonoBehaviour{
             boxCollider2D.isTrigger = false;
             boxCollider2D.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
         }
-
-        SpawnEnemies();
+        if(spawnEnemies){
+            SpawnEnemies();
+        }
+        else{
+            boss.GetComponent<Boss1>().Activate();
+        }
     }
 
     private void SpawnEnemies(){

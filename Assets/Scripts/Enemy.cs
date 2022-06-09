@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour{
     public float damage = 1f;
     public bool canMove = true;
     public Rigidbody2D rb;
-    public Rigidbody2D playerRB;
+    private Rigidbody2D playerRB;
     public Animator anim;
 
     private void Start(){
@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour{
             health -= player.attackDamage;
             if (health <= 0){
                 player.enemiesInRoom -= 1;
-                if (player.enemiesInRoom == 0){
+                if (player.enemiesInRoom <= 0){
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().currentRoom.GetComponent<Room>().OpenDoors();
                     player.SpawnLoot();
                 }

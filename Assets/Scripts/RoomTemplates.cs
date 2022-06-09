@@ -49,8 +49,10 @@ public class RoomTemplates : MonoBehaviour{
     private void Update(){
         if (waitTime <= 0 && level <= 4){
             if (levelsWithBoss.Contains(level)){
+                Debug.Log(level);
                 GameObject lastTop = LastTop(levelList.list[level].list);
-                Instantiate(boss, lastTop.transform.position, Quaternion.identity);
+                lastTop.GetComponent<Room>().boss = Instantiate(boss, lastTop.transform.position, Quaternion.identity);
+                lastTop.GetComponent<Room>().spawnEnemies = false;
             }
 
             waitTime = 4f;
