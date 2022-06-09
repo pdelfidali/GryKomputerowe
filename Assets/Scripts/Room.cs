@@ -28,7 +28,18 @@ public class Room : MonoBehaviour{
             SpawnEnemies();
         }
         else{
-            boss.GetComponent<Boss1>().Activate();
+            try{
+                boss.GetComponent<Boss1>().Activate();
+            }
+            catch (Exception e){
+                ;
+            }
+            try{
+                boss.GetComponent<Boss2>().Activate();            
+            }
+            catch (Exception e){
+                ;
+            }
         }
     }
 
