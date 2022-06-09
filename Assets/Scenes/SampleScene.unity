@@ -4266,7 +4266,7 @@ MonoBehaviour:
   playerController: {fileID: 1158565134}
   deadGUI: {fileID: 1890436179}
   playerGUIGO: {fileID: 1468348972}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1943460911}
 --- !u!114 &1158565140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6966,7 +6966,6 @@ MonoBehaviour:
   leftClosed: {fileID: 7129702660955236550, guid: 5acae1e91ca339841935f3de178937dc, type: 3}
   rightClosed: {fileID: 8398414690192744627, guid: 0f726840603c74c4cb884ba504a9d988, type: 3}
   closedRoom: {fileID: 537548642043389353, guid: 819475a5f3016094a961564b4121655b, type: 3}
-  rooms: []
   waitTime: 4
   boss: {fileID: 1268695114772217291, guid: c9bdb111ac4fc47418f683921463e2b0, type: 3}
   levelList:
@@ -6983,6 +6982,13 @@ MonoBehaviour:
       - {fileID: 1077993679}
     - list: []
   level: 0
+  floorColor:
+  - {r: 1, g: 0.06132078, b: 0.06132078, a: 1}
+  - {r: 0, g: 1, b: 0.016851187, a: 1}
+  - {r: 1, g: 0.86571354, b: 0, a: 1}
+  - {r: 0, g: 0.31783962, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  levelsWithBoss: 
 --- !u!4 &1913839768
 Transform:
   m_ObjectHideFlags: 0

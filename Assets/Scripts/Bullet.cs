@@ -6,15 +6,20 @@ using UnityEngine;
 public class Bullet : MonoBehaviour{
     public Rigidbody2D rb;
     public float attackDamage = 2f;
-    
+
+    private void Start(){
+        StartCoroutine(DeleteAfter2());
+    }
+
+    private IEnumerator DeleteAfter2(){
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
+    }
+
     private void OnCollisionEnter2D(Collision2D other){
-        if (other.gameObject.CompareTag("Walls") || other.gameObject.CompareTag("Doors") 
-                                                 || other.gameObject.CompareTag("Bullet")
-                                                 || other.gameObject.CompareTag("EnemyBullet")){
+        if (!other.gameObject.CompareTag("Player")){
             Destroy(gameObject);
         }
-        
-        
     }
 
     private void OnTriggerExit2D(Collider2D other){

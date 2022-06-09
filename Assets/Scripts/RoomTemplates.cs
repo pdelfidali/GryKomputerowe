@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RoomTemplates : MonoBehaviour{
@@ -22,6 +23,8 @@ public class RoomTemplates : MonoBehaviour{
     public LevelList levelList = new LevelList();
     public int level = 0;
     public List<Color> floorColor = new List<Color>();
+
+    public List<int> levelsWithBoss;
 
     private void Start(){
         StartCoroutine(ChangeFloorColor());
@@ -45,13 +48,26 @@ public class RoomTemplates : MonoBehaviour{
 
     private void Update(){
         if (waitTime <= 0 && level <= 4){
-            Instantiate(boss, levelList.list[level].list[^1].transform.position, Quaternion.identity);
+            if (levelsWithBoss.Contains(level)){
+                GameObject lastTop = LastTop(levelList.list[level].list);
+                Instantiate(boss, lastTop.transform.position, Quaternion.identity);
+            }
+
             waitTime = 4f;
             level += 1;
         }
         else{
             waitTime -= Time.deltaTime;
         }
+    }
+
+    private GameObject LastTop(List<GameObject> _level){
+        for (int i = _level.Count - 1; i > 0; i--){
+            if (_level[i].name == "B(Clone)"){
+                return _level[i];
+            }
+        }
+        return null;
     }
 
     [System.Serializable]
