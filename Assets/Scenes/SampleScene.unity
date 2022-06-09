@@ -8456,7 +8456,7 @@ MonoBehaviour:
   - "Marcin: Aha, pyta\u0142e\u015B si\u0119 mnie ostatnio i ju\u017C ogarn\u0105\u0142em:
     chodzisz klawiszami WASD, a strzelasz myszk\u0105."
   - "Ma\u0142piszon: Noo, nareszcie b\u0119d\u0119 m\xF3g\u0142 si\u0119 porusza\u0107. "
-  textSpeed: 0.3
+  textSpeed: 0.02
 --- !u!114 &1136772185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9347,6 +9347,7 @@ MonoBehaviour:
   deadGUI: {fileID: 1890436179}
   playerGUIGO: {fileID: 1468348972}
   audioSource: {fileID: 1943460911}
+  level: 0
 --- !u!114 &1158565140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9361,6 +9362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSpeed: {fileID: 1376385175}
   attackDamage: {fileID: 1019688165}
+  level: {fileID: 0}
   health: {fileID: 1542079434}
   player: {fileID: 1158565138}
 --- !u!95 &1158565141
