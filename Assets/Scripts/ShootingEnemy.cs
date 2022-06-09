@@ -7,6 +7,7 @@ public class ShootingEnemy : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public Animator anim;
     
     public float bulletForce = 5f;
     public float attackSpeed = 2f;
@@ -25,6 +26,7 @@ public class ShootingEnemy : MonoBehaviour
         }
         timeFromLastAttack += Time.deltaTime;
         direction = playerRB.position - rb.position;
+        animate();
     }
 
     void Shoot(){
@@ -32,5 +34,11 @@ public class ShootingEnemy : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(direction.normalized * bulletForce, ForceMode2D.Impulse);
         timeFromLastAttack = 0;
+    }
+    
+    private void animate()
+    {
+        anim.SetFloat("X", direction.x);
+        anim.SetFloat("Y", direction.y);
     }
 }

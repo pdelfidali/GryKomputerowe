@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7984823859301617233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.692, z: 0}
+  m_LocalPosition: {x: 0, y: 0.074, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -141,7 +141,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &7984823860751356077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7984823859301617232}
   bulletPrefab: {fileID: 690752116207280509, guid: 218dbedce5257b845acba6d10deaac2a, type: 3}
+  anim: {fileID: 8426492617993222973}
   bulletForce: 5
   attackSpeed: 1
 --- !u!114 &7984823860751356074
@@ -176,7 +177,6 @@ MonoBehaviour:
   damage: 1
   canMove: 0
   rb: {fileID: 7984823860751356076}
-  playerRB: {fileID: 0}
   anim: {fileID: 8426492617993222973}
 --- !u!95 &8426492617993222973
 Animator:
