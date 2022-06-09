@@ -22,6 +22,7 @@ public class PlayerShooting : MonoBehaviour{
     public GameObject deadGUI;
     public GameObject playerGUIGO;
     public AudioSource audioSource;
+    public int level;
 
     private void Start(){
         Time.timeScale = 1;

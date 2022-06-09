@@ -16,6 +16,7 @@ public class goUpstairs : MonoBehaviour
         {
             player.transform.position += Vector3.right * 1006 + Vector3.down * 5;
             cam.transform.position += Vector3.right * 1000;
+            other.gameObject.GetComponent<PlayerShooting>().level += 1;
         }
     }
 }
