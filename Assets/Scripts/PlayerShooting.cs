@@ -24,6 +24,7 @@ public class PlayerShooting : MonoBehaviour{
     public AudioSource audioSource;
     public int level;
     public int bossesKilled;
+    public AudioSource backgroundMusic;
 
     private void Start(){
         Time.timeScale = 1;
