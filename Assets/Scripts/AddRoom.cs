@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class AddRoom : MonoBehaviour
@@ -8,6 +10,11 @@ public class AddRoom : MonoBehaviour
 
     private void Start(){
         templates = GameObject.FindGameObjectWithTag("Templates").GetComponent<RoomTemplates>();
-        templates.rooms.Add(this.gameObject);
+        try{ 
+            templates.levelList.list[templates.level].list.Add(this.gameObject);
+        }
+        catch (Exception e){
+            ;
+        }
     }
 }
