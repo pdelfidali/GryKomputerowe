@@ -29,11 +29,12 @@ public class PlayerShooting : MonoBehaviour{
         timeFromLastAttack += Time.deltaTime;
     }
 
-    public void Shoot(){
+    public void Shoot(Vector2 mousePosition){
         if(timeFromLastAttack > 1/attackSpeed){
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            var position = firePoint.position;
+            GameObject bullet = Instantiate(bulletPrefab, position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+            rb.AddForce((mousePosition - (Vector2) position) * bulletForce, ForceMode2D.Impulse);
             timeFromLastAttack = 0;
         }
     }

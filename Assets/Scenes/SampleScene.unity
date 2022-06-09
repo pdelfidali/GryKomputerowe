@@ -4042,7 +4042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1200338774}
   bulletPrefab: {fileID: 690752116207280509, guid: 4a647f91a6d44ef40a522b99068dd4c4, type: 3}
-  bulletForce: 20
+  bulletForce: 5
   attackSpeed: 1.5
   attackDamage: 2
   enemiesInRoom: 0
@@ -4129,7 +4129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200338773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0.352, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7256,6 +7256,10 @@ PrefabInstance:
     - target: {fileID: 1537774812153778800, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: isActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537774812182353622, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1537774812344502074, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_TagString

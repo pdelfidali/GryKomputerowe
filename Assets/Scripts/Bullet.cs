@@ -16,4 +16,8 @@ public class Bullet : MonoBehaviour{
         
         
     }
+
+    private void OnTriggerExit2D(Collider2D other){
+        gameObject.GetComponent<CapsuleCollider2D>().isTrigger = false;
+    }
 }

@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour{
              
         if (Input.GetButtonDown("Fire1")){
             mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-            playerShooting.Shoot();
+            playerShooting.Shoot(mousePos);
             Vector2 lookDir = mousePos - rb.position;
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
             anim.SetFloat("X", lookDir.x);
