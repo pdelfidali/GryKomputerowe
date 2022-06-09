@@ -37,4 +37,9 @@ public class Boss2 : MonoBehaviour{
         yMod = yMod * -1;
         xMod = xMod * -1;
     }
+    
+    
+    private void OnDestroy(){
+        playerRB.gameObject.GetComponent<PlayerShooting>().bossesKilled += 1;
+    }
 }

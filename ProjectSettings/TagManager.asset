@@ -15,6 +15,7 @@ TagManager:
   - EnemyBullet
   - Loot
   - Boss
+  - Audio
   layers:
   - Default
   - TransparentFX

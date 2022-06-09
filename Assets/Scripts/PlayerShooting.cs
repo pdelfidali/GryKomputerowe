@@ -23,6 +23,7 @@ public class PlayerShooting : MonoBehaviour{
     public GameObject playerGUIGO;
     public AudioSource audioSource;
     public int level;
+    public int bossesKilled;
 
     private void Start(){
         Time.timeScale = 1;
