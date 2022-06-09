@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour{
     public bool canMove = true;
     public Rigidbody2D rb;
     public Rigidbody2D playerRB;
+    public Animator anim;
 
     private void Start(){
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerShooting>();
@@ -26,7 +27,13 @@ public class Enemy : MonoBehaviour{
 
         Vector2 lookDir = playerRB.position - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;    
+        //rb.rotation = angle;
+        animate();
+    }
+
+    private void Update()
+    {
+        animate();
     }
 
     private void OnCollisionEnter2D(Collision2D other){
@@ -43,5 +50,19 @@ public class Enemy : MonoBehaviour{
             }
         }
 
+    }
+
+    private void animate()
+    {
+        if (rb.velocity.x != 0 || rb.velocity.y != 0)
+        {
+            anim.SetFloat("X", rb.velocity.x);
+            anim.SetFloat("Y", rb.velocity.y);
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
+        }
     }
 }
