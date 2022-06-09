@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1107 &-2768734046816073645
+--- !u!1107 &-3066341709256558605
 AnimatorStateMachine:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -10,8 +10,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 6696072376647009575}
-    m_Position: {x: 344.73682, y: 117.36841, z: 0}
+    m_State: {fileID: 7808919100372538675}
+    m_Position: {x: 310, y: 110, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -21,14 +21,14 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 6696072376647009575}
+  m_DefaultState: {fileID: 7808919100372538675}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: shootingController
+  m_Name: BossController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: X
@@ -46,7 +46,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: -2768734046816073645}
+    m_StateMachine: {fileID: -3066341709256558605}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -56,7 +56,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!206 &6321000886749093554
+--- !u!206 &7717356873661655748
 BlendTree:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,7 +65,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: d5f205d7e43c3964493cc92db09b1ba0, type: 2}
+    m_Motion: {fileID: 7400000, guid: 4e3bf739631df9f49965a335c90fc6d1, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: -1}
     m_TimeScale: 1
@@ -73,7 +73,7 @@ BlendTree:
     m_DirectBlendParameter: X
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: d493285a3f56b1640899c2de8221bbed, type: 2}
+    m_Motion: {fileID: 7400000, guid: 922db9307c15f7249a374af5772dcd0a, type: 2}
     m_Threshold: 0.33333334
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
@@ -81,7 +81,7 @@ BlendTree:
     m_DirectBlendParameter: X
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: ad70810bb6be3da468413abe0f351714, type: 2}
+    m_Motion: {fileID: 7400000, guid: a34ad70c53021fc488fc76deed4b4501, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
@@ -89,7 +89,7 @@ BlendTree:
     m_DirectBlendParameter: X
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 33146be89058b284f979b7eef288928c, type: 2}
+    m_Motion: {fileID: 7400000, guid: 60f63e2b9d3cd514a86f28eea500b493, type: 2}
     m_Threshold: 1
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
@@ -103,7 +103,7 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
---- !u!1102 &6696072376647009575
+--- !u!1102 &7808919100372538675
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -123,7 +123,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6321000886749093554}
+  m_Motion: {fileID: 7717356873661655748}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

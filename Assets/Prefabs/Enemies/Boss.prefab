@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8970647711321505905}
   - component: {fileID: -783591889351372197}
   - component: {fileID: 3148994742589690761}
+  - component: {fileID: 7129279569584657694}
   m_Layer: 7
   m_Name: Boss
   m_TagString: Boss
@@ -105,6 +106,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 690752116207280509, guid: 770e38a5742433f4fa557cf02a3af95b, type: 3}
   playerRB: {fileID: 0}
   bulletForce: 7.5
+  anim: {fileID: 7129279569584657694}
+  boss: {fileID: -783591889351372197}
 --- !u!114 &8970647711321505905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +164,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0.014036909, y: -0.012227207}
   m_Size: {x: 0.2506099, y: 0.3306952}
   m_Direction: 0
+--- !u!95 &7129279569584657694
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268695114772217291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75ed971e020ebd14bbdf7ccdaf822906, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

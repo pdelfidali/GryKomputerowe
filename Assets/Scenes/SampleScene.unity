@@ -4993,6 +4993,18 @@ MonoBehaviour:
   playerUI: {fileID: 1158565140}
   lootPrefabs:
   - {fileID: 1983059198286419761, guid: 7163567f4b9499b429da766531b19cf5, type: 3}
+  - {fileID: 1983059198286419761, guid: d1069d0e8985327408bd7b1ceb868501, type: 3}
+  - {fileID: 1983059198286419761, guid: 3b4b82a5208690940bb09e3f2cec0893, type: 3}
+  - {fileID: 1983059198286419761, guid: e90d429a81d264a4bb02af6836df91be, type: 3}
+  - {fileID: 1983059198286419761, guid: 56748fe033ea78246a37b9a78861741a, type: 3}
+  - {fileID: 1983059198286419761, guid: f6f5e8d52695caf4382351145a6d8a1d, type: 3}
+  - {fileID: 1983059198286419761, guid: 80e556f7937fd0a43b042ae24fd3ce01, type: 3}
+  - {fileID: 1983059198286419761, guid: 4fe98389de386d448976d4eebf38173a, type: 3}
+  - {fileID: 1983059198286419761, guid: ee0bbb0385792e3438574286eebf68e2, type: 3}
+  - {fileID: 1983059198286419761, guid: b4046a470768c1740ab71003612de789, type: 3}
+  - {fileID: 1983059198286419761, guid: 0509bb52dfec3fb4fba5e76893884e26, type: 3}
+  - {fileID: 1983059198286419761, guid: cffea880b6fd0944dba47f36063bf3db, type: 3}
+  - {fileID: 1983059198286419761, guid: 84ced77285c08274db077b2bd7944f00, type: 3}
   playerController: {fileID: 1158565134}
   deadGUI: {fileID: 1890436179}
   playerGUIGO: {fileID: 1468348972}
@@ -7929,6 +7941,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.26392388, g: 1, b: 0, a: 1}
   - {r: 0.26392388, g: 1, b: 0, a: 1}
   levelsWithBoss: 00000000
 --- !u!4 &1913839768
