@@ -4855,7 +4855,7 @@ GameObject:
   - component: {fileID: 1158565140}
   - component: {fileID: 1158565141}
   - component: {fileID: 1158565142}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4941,7 +4941,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 60
   m_Sprite: {fileID: 1563756421, guid: 64698dc3fae491843a1f3bd14131454f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5059,7 +5059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200338774}
   - component: {fileID: 1200338775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8061,7 +8061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943460912}
   - component: {fileID: 1943460911}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8411,7 +8411,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &1962245830
 SpriteRenderer:
   m_ObjectHideFlags: 0
