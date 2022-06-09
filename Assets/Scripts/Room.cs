@@ -22,13 +22,24 @@ public class Room : MonoBehaviour{
     public void CloseDoors(){
         foreach (var boxCollider2D in doors){
             boxCollider2D.isTrigger = false;
-            boxCollider2D.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
+            boxCollider2D.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
         if(spawnEnemies){
             SpawnEnemies();
         }
         else{
-            boss.GetComponent<Boss1>().Activate();
+            try{
+                boss.GetComponent<Boss1>().Activate();
+            }
+            catch (Exception e){
+                ;
+            }
+            try{
+                boss.GetComponent<Boss2>().Activate();            
+            }
+            catch (Exception e){
+                ;
+            }
         }
     }
 

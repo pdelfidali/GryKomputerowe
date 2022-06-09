@@ -53,6 +53,7 @@ public class RoomTemplates : MonoBehaviour{
                 GameObject lastTop = LastTop(levelList.list[level].list);
                 lastTop.GetComponent<Room>().boss = Instantiate(boss, lastTop.transform.position, Quaternion.identity);
                 lastTop.GetComponent<Room>().spawnEnemies = false;
+                lastTop.GetComponent<Room>().boss.transform.parent = lastTop.transform;
             }
 
             waitTime = 4f;

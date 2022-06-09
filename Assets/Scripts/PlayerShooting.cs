@@ -50,7 +50,7 @@ public class PlayerShooting : MonoBehaviour{
             health -= other.gameObject.GetComponent<Bullet>().attackDamage;
         }
 
-        if (other.gameObject.CompareTag("Enemy")){
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Boss")){
             health -= other.gameObject.GetComponent<Enemy>().damage;
         }
 

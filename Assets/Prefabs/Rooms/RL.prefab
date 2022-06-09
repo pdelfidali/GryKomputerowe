@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 898388700, guid: 0a0a07d225174144784e9152f61df462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -1841,6 +1841,8 @@ MonoBehaviour:
   - {fileID: 2234321465993320997}
   mainCamera: {fileID: 0}
   floorColor: {fileID: 1936169889903538429}
+  spawnEnemies: 1
+  boss: {fileID: 0}
 --- !u!1 &3207009079612667609
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,7 +3051,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 898388700, guid: 0a0a07d225174144784e9152f61df462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
