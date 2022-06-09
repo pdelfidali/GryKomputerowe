@@ -50,15 +50,15 @@ public class Enemy : MonoBehaviour{
 
     private void animate()
     {
-        if (rb.velocity.x != 0 || rb.velocity.y != 0)
-        {
-            anim.SetFloat("X", rb.velocity.x);
-            anim.SetFloat("Y", rb.velocity.y);
-            anim.SetBool("isMoving", true);
-        }
-        else
-        {
-            anim.SetBool("isMoving", false);
+        if(rb){
+            if (rb.velocity.x != 0 || rb.velocity.y != 0){
+                anim.SetFloat("X", rb.velocity.x);
+                anim.SetFloat("Y", rb.velocity.y);
+                anim.SetBool("isMoving", true);
+            }
+            else{
+                anim.SetBool("isMoving", false);
+            }
         }
     }
 }

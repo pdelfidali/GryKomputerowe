@@ -51,14 +51,14 @@ public class RoomTemplates : MonoBehaviour{
     private void Update(){
         if (waitTime <= 0 && level <= 14){
             if (levelsWithBoss.Contains(level)){
-                GameObject lastTop = LastTop(levelList.list[level].list);
+                GameObject lastTop = levelList.list[level].list[^1];
                 lastTop.GetComponent<Room>().boss = Instantiate(boss, lastTop.transform.position, Quaternion.identity);
                 lastTop.GetComponent<Room>().spawnEnemies = false;
                 lastTop.GetComponent<Room>().boss.transform.parent = lastTop.transform;
             }
 
             if (level == levelWithBoss2){
-                GameObject lastTop = LastTop(levelList.list[level].list);
+                GameObject lastTop = levelList.list[level].list[^1];
                 lastTop.GetComponent<Room>().boss = Instantiate(boss2, lastTop.transform.position, Quaternion.identity);
                 lastTop.GetComponent<Room>().spawnEnemies = false;
                 lastTop.GetComponent<Room>().boss.transform.parent = lastTop.transform;
@@ -70,15 +70,6 @@ public class RoomTemplates : MonoBehaviour{
         else{
             waitTime -= Time.deltaTime;
         }
-    }
-
-    private GameObject LastTop(List<GameObject> _level){
-        for (int i = _level.Count - 1; i > 0; i--){
-            if (_level[i].name is "B(Clone)" or "BL(Clone)" or "BR(Clone)"){
-                return _level[i];
-            }
-        }
-        return null;
     }
 
     [System.Serializable]

@@ -12,10 +12,14 @@ public class Boss1 : MonoBehaviour{
     public float bulletForce = 5f;
     public Animator anim;
     public Rigidbody2D boss;
-
+    public GameObject klapa;
+    public GameObject klapa2;
     private Vector2 direction;
+    public Sprite otwartaKlapa;
 
     private void Start(){
+        klapa = GameObject.FindGameObjectWithTag("Klapa");        
+        klapa2 = GameObject.FindGameObjectWithTag("Klapa2");
         playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
@@ -49,5 +53,10 @@ public class Boss1 : MonoBehaviour{
 
     private void OnDestroy(){
         playerRB.gameObject.GetComponent<PlayerShooting>().bossesKilled += 1;
+        if (playerRB.gameObject.GetComponent<PlayerShooting>().bossesKilled >= 1){
+            klapa.GetComponent<SpriteRenderer>().sprite = otwartaKlapa;
+        }if (playerRB.gameObject.GetComponent<PlayerShooting>().bossesKilled >= 2){
+            klapa2.GetComponent<SpriteRenderer>().sprite = otwartaKlapa;
+        }
     }
 }
