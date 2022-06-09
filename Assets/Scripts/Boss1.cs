@@ -46,4 +46,8 @@ public class Boss1 : MonoBehaviour{
         anim.SetFloat("X", direction.x);
         anim.SetFloat("Y", direction.y);
     }
+
+    private void OnDestroy(){
+        playerRB.gameObject.GetComponent<PlayerShooting>().bossesKilled += 1;
+    }
 }

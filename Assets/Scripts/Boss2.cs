@@ -14,14 +14,17 @@ public class Boss2 : MonoBehaviour{
     private int xMod = 1;
     private int yMod = 1;
     public AudioSource source;
+    private AudioSource background;
     public AudioClip boss2music;
 
     private void Start(){
         playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         source = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
+        background = GameObject.FindGameObjectWithTag("BackgroundAudio").GetComponent<AudioSource>();
     }
 
     public void Activate(){
+        background.Stop();
         source.clip = boss2music;
         source.Play();
        StartCoroutine(Run());
@@ -36,5 +39,11 @@ public class Boss2 : MonoBehaviour{
     private void OnCollisionEnter2D(Collision2D other){
         yMod = yMod * -1;
         xMod = xMod * -1;
+    }
+    
+    
+    private void OnDestroy(){
+        playerRB.gameObject.GetComponent<PlayerShooting>().bossesKilled += 1;
+        background.Play();
     }
 }

@@ -19,12 +19,14 @@ public class RoomTemplates : MonoBehaviour{
     public float waitTime;
     private bool spawnedBoss;
     public GameObject boss;
+    public GameObject boss2;
 
     public LevelList levelList = new LevelList();
     public int level = 0;
     public List<Color> floorColor = new List<Color>();
 
     public List<int> levelsWithBoss;
+    public int levelWithBoss2;
 
     private void Start(){
         StartCoroutine(ChangeFloorColor());
@@ -49,9 +51,15 @@ public class RoomTemplates : MonoBehaviour{
     private void Update(){
         if (waitTime <= 0 && level <= 14){
             if (levelsWithBoss.Contains(level)){
-                Debug.Log(level);
                 GameObject lastTop = LastTop(levelList.list[level].list);
                 lastTop.GetComponent<Room>().boss = Instantiate(boss, lastTop.transform.position, Quaternion.identity);
+                lastTop.GetComponent<Room>().spawnEnemies = false;
+                lastTop.GetComponent<Room>().boss.transform.parent = lastTop.transform;
+            }
+
+            if (level == levelWithBoss2){
+                GameObject lastTop = LastTop(levelList.list[level].list);
+                lastTop.GetComponent<Room>().boss = Instantiate(boss2, lastTop.transform.position, Quaternion.identity);
                 lastTop.GetComponent<Room>().spawnEnemies = false;
                 lastTop.GetComponent<Room>().boss.transform.parent = lastTop.transform;
             }
