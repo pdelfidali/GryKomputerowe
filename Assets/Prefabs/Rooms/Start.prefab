@@ -1525,6 +1525,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 3
   waitTime: 4
+  delay: 0
+  maxRooms: 8
 --- !u!61 &1537774811122962768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1867,6 +1869,7 @@ MonoBehaviour:
   - {fileID: 1537774812153778801}
   spawnPoints: []
   mainCamera: {fileID: 0}
+  floorColor: {fileID: 7477413144791925902}
 --- !u!1 &1537774812153778806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 1
   waitTime: 4
+  delay: 0
+  maxRooms: 8
 --- !u!61 &6419793808404776439
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3314,6 +3319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 2
   waitTime: 4
+  delay: 0
+  maxRooms: 8
 --- !u!61 &3866225317689439904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3409,6 +3416,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 0
   waitTime: 4
+  delay: 0
+  maxRooms: 8
 --- !u!61 &4287981748553499429
 BoxCollider2D:
   m_ObjectHideFlags: 0

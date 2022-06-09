@@ -14,15 +14,34 @@ public class RoomTemplates : MonoBehaviour{
     public GameObject rightClosed;
 
     public GameObject closedRoom;
-
-    public List<GameObject> rooms;
-
+    
     public float waitTime;
     private bool spawnedBoss;
     public GameObject boss;
 
     public LevelList levelList = new LevelList();
     public int level = 0;
+    public List<Color> floorColor = new List<Color>();
+
+    private void Start(){
+        StartCoroutine(ChangeFloorColor());
+    }
+
+    IEnumerator ChangeFloorColor(){
+        yield return new WaitForSeconds(4 * floorColor.Count);
+        int i = 0;
+        foreach (var lelevel in levelList.list){
+            foreach (var room in lelevel.list){
+                try{
+                    room.GetComponent<Room>().floorColor.color = floorColor[i];
+                }
+                catch (Exception e){
+                    ;
+                }
+            }
+            i++;
+        }
+    }
 
     private void Update(){
         if (waitTime <= 0 && level <= 4){

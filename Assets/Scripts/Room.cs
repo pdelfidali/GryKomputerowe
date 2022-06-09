@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
 public class Room : MonoBehaviour{
@@ -10,6 +11,7 @@ public class Room : MonoBehaviour{
     private List<Enemy> enemies;
     public List<GameObject> spawnPoints;
     public Camera mainCamera;
+    public Tilemap floorColor;
 
     private void Start(){
         enemies = GameObject.FindGameObjectWithTag("Enemies").GetComponent<EnemyTemplates>().enemies;

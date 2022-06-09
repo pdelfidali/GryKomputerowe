@@ -2961,6 +2961,7 @@ MonoBehaviour:
   - {fileID: 8905826245237287800}
   - {fileID: 5249211962827006975}
   mainCamera: {fileID: 0}
+  floorColor: {fileID: 6261639270617481172}
 --- !u!1839735485 &4340578521028713049
 Tilemap:
   m_ObjectHideFlags: 0

@@ -1985,6 +1985,7 @@ MonoBehaviour:
   - {fileID: 8448738337750159500}
   - {fileID: 2028480984283425101}
   mainCamera: {fileID: 0}
+  floorColor: {fileID: 6142376467096427812}
 --- !u!1 &7925368505714005374
 GameObject:
   m_ObjectHideFlags: 0
