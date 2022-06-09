@@ -20,10 +20,12 @@ public class PlayerShooting : MonoBehaviour{
     public List<GameObject> lootPrefabs;
     public PlayerController playerController;
     public GameObject deadGUI;
+    public GameObject playerGUIGO;
 
     private void Start(){
         Time.timeScale = 1;
         timeFromLastAttack = 1 / attackSpeed;
+        playerGUIGO.SetActive(true);
         playerUI.UpdateUI();
     }
 
@@ -62,7 +64,7 @@ public class PlayerShooting : MonoBehaviour{
         if (health <= 0){
             Time.timeScale = 0;
             deadGUI.SetActive(true);
-            playerUI.gameObject.SetActive(false);
+            playerGUIGO.SetActive(false);
         }
         
         playerUI.UpdateUI();
