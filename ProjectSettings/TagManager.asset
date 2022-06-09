@@ -16,6 +16,7 @@ TagManager:
   - Loot
   - Boss
   - Audio
+  - BackgroundAudio
   layers:
   - Default
   - TransparentFX
