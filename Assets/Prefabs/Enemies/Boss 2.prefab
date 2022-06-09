@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -783591889351372197}
   - component: {fileID: 3148994742589690761}
   - component: {fileID: 3158987714534759393}
+  - component: {fileID: 6653078080187072654}
   m_Layer: 7
   m_Name: Boss 2
   m_TagString: Boss
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -1880444699, guid: 9f450d135ba8f234ba3a966e1bfc5c6b, type: 3}
+  m_SortingOrder: 60
+  m_Sprite: {fileID: -1042376862, guid: 7f496601af35a4349bdbb01de7fad601, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,7 +107,7 @@ MonoBehaviour:
   damage: 1
   canMove: 0
   rb: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 6653078080187072654}
 --- !u!50 &-783591889351372197
 Rigidbody2D:
   serializedVersion: 4
@@ -141,8 +142,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014036909, y: -0.012227207}
-  m_Size: {x: 0.2506099, y: 0.3306952}
+  m_Offset: {x: 0.0007047653, y: 0.0011049807}
+  m_Size: {x: 0.2772743, y: 0.3040309}
   m_Direction: 0
 --- !u!114 &3158987714534759393
 MonoBehaviour:
@@ -162,3 +163,23 @@ MonoBehaviour:
   speed: 10
   source: {fileID: 0}
   boss2music: {fileID: 8300000, guid: 41c15bc283edff4439c9734cd8eaf830, type: 3}
+--- !u!95 &6653078080187072654
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268695114772217291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd7b07afea4cfb44aebaca4fcf613b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
