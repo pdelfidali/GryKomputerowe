@@ -21,6 +21,7 @@ public class PlayerShooting : MonoBehaviour{
     public PlayerController playerController;
     public GameObject deadGUI;
     public GameObject playerGUIGO;
+    public AudioSource audioSource;
 
     private void Start(){
         Time.timeScale = 1;
@@ -35,6 +36,7 @@ public class PlayerShooting : MonoBehaviour{
 
     public void Shoot(Vector2 mousePosition){
         if(timeFromLastAttack > 1/attackSpeed){
+            audioSource.Play();
             var position = firePoint.position;
             GameObject bullet = Instantiate(bulletPrefab, position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

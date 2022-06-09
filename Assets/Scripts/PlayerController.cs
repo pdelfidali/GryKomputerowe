@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour{
             mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             playerShooting.Shoot(mousePos);
             Vector2 lookDir = mousePos - rb.position;
-            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
             anim.SetFloat("X", lookDir.x);
             anim.SetFloat("Y", lookDir.y);
             waitTime = 0.25f;
