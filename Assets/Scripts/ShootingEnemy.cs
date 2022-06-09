@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,25 @@ public class ShootingEnemy : MonoBehaviour
     public float bulletForce = 5f;
     public float attackSpeed = 2f;
     private float timeFromLastAttack = 0f;
+    private Rigidbody2D playerRB;
+    private Rigidbody2D rb;
     
+    private void Start(){
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+    }
     private void Update(){
         if (timeFromLastAttack > 1/attackSpeed){
             Shoot();
         }
         timeFromLastAttack += Time.deltaTime;
+    }
+
+    private void FixedUpdate(){
+        
+        Vector2 lookDir = playerRB.position - rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
     }
 
     void Shoot(){

@@ -21,19 +21,15 @@ public class Enemy : MonoBehaviour{
 
     private void FixedUpdate(){
         if(canMove){
-            transform.position = Vector2.MoveTowards(transform.position,
-                player.transform.position, moveSpeed * Time.deltaTime);
+            rb.velocity = (playerRB.position - rb.position).normalized * moveSpeed;
         }
-
-        Vector2 lookDir = playerRB.position - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        //rb.rotation = angle;
-        animate();
     }
 
     private void Update()
     {
-        animate();
+        if (anim){
+            animate();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other){
