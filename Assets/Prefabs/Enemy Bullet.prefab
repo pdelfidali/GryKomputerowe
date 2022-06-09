@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9119991076747867601}
   - component: {fileID: -894562301244472537}
   - component: {fileID: 4179068150820672898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy Bullet
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4179068150820672898}
+  attackDamage: 2
 --- !u!70 &-894562301244472537
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
