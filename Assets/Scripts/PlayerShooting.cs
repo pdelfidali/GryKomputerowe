@@ -22,6 +22,7 @@ public class PlayerShooting : MonoBehaviour{
     public GameObject deadGUI;
 
     private void Start(){
+        Time.timeScale = 1;
         timeFromLastAttack = 1 / attackSpeed;
         playerUI.UpdateUI();
     }
