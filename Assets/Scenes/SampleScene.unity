@@ -8773,7 +8773,7 @@ MonoBehaviour:
   - "Marcin: Aha, pyta\u0142e\u015B si\u0119 mnie ostatnio i ju\u017C ogarn\u0105\u0142em:
     chodzisz klawiszami WASD, a strzelasz myszk\u0105."
   - "Ma\u0142piszon: Noo, nareszcie b\u0119d\u0119 m\xF3g\u0142 si\u0119 porusza\u0107. "
-  textSpeed: 0.3
+  textSpeed: 0.02
 --- !u!114 &1136772185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11199,7 +11199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 40
+      value: 40.5
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -11307,7 +11307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 40
+      value: 40.5
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -11319,7 +11319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 40
+      value: 40.5
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -11331,7 +11331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 40
+      value: 40.5
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
