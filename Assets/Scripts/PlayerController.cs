@@ -46,10 +46,6 @@ public class PlayerController : MonoBehaviour{
     }
 
 
-    private void OnTriggerEnter2D(Collider2D dialogue)
-    {
-        dialogue
-    }
     private void OnTriggerExit2D(Collider2D other){
         if (other.CompareTag("Doors")){
             currentRoom = other.GetComponent<Door>().room;

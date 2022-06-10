@@ -14730,6 +14730,7 @@ MonoBehaviour:
   audioSource: {fileID: 1943460911}
   gg: {fileID: 8300000, guid: 3b15a0f871c038640814b68191e42400, type: 3}
   pogrzebKota: {fileID: 8300000, guid: 6c62ec35a733fd347b73f53c363d9c72, type: 3}
+  background: {fileID: 1886397253}
 --- !u!4 &1890436181
 Transform:
   m_ObjectHideFlags: 0

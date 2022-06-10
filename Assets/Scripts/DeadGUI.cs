@@ -8,8 +8,10 @@ public class DeadGUI : MonoBehaviour{
     public AudioSource audioSource;
     public AudioClip gg;
     public AudioClip pogrzebKota;
+    public AudioSource background;
 
     private void Start(){
+        background.Stop();
         audioSource.clip = gg;
         audioSource.Play();
         StartCoroutine(Waiter());
