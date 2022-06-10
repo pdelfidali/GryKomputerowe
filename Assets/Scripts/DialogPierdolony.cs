@@ -26,7 +26,7 @@ public class DialogPierdolony : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (textComponent.text == lines[index])
             {
