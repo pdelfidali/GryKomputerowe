@@ -2622,7 +2622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 20
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811122962769, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -2730,7 +2730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 20
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: 2148275264876881108, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -2742,7 +2742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 20
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: 5068911126985379404, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -2754,7 +2754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: delay
-      value: 20
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: 6937035637259574266, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: maxRooms
@@ -14917,7 +14917,7 @@ MonoBehaviour:
   rightClosed: {fileID: 8398414690192744627, guid: 0f726840603c74c4cb884ba504a9d988, type: 3}
   closedRoom: {fileID: 537548642043389353, guid: 819475a5f3016094a961564b4121655b, type: 3}
   waitTime: 4
-  boss: {fileID: 1268695114772217291, guid: c9bdb111ac4fc47418f683921463e2b0, type: 3}
+  boss: {fileID: 1268695114772217291, guid: d6c509ff4f9fbe748b0724743c91db58, type: 3}
   boss2: {fileID: 1268695114772217291, guid: d6c509ff4f9fbe748b0724743c91db58, type: 3}
   levelList:
     list:
