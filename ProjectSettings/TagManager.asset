@@ -17,6 +17,8 @@ TagManager:
   - Boss
   - Audio
   - BackgroundAudio
+  - Klapa
+  - Klapa2
   layers:
   - Default
   - TransparentFX

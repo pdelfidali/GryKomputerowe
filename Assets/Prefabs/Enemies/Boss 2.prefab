@@ -160,7 +160,7 @@ MonoBehaviour:
   rb: {fileID: -783591889351372197}
   walkingTime: 2
   chargingTime: 2
-  speed: 10
+  speed: 7
   source: {fileID: 0}
   boss2music: {fileID: 8300000, guid: 41c15bc283edff4439c9734cd8eaf830, type: 3}
 --- !u!95 &6653078080187072654

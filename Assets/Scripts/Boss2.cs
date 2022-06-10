@@ -11,8 +11,6 @@ public class Boss2 : MonoBehaviour{
     public float chargingTime;
     public float speed;
     private Rigidbody2D playerRB;
-    private int xMod = 1;
-    private int yMod = 1;
     public AudioSource source;
     private AudioSource background;
     public AudioClip boss2music;
@@ -24,9 +22,8 @@ public class Boss2 : MonoBehaviour{
     }
 
     public void Activate(){
-        background.Stop();
-        source.clip = boss2music;
-        source.Play();
+        background.clip = boss2music;
+        background.Play();
        StartCoroutine(Run());
     }
 
@@ -35,11 +32,7 @@ public class Boss2 : MonoBehaviour{
         rb.velocity = (playerRB.position - rb.position)*speed;
         StartCoroutine(Run());
     }
-
-    private void OnCollisionEnter2D(Collision2D other){
-        yMod = yMod * -1;
-        xMod = xMod * -1;
-    }
+    
     
     
     private void OnDestroy(){

@@ -16,6 +16,7 @@ public class Boss1 : MonoBehaviour{
     public GameObject klapa2;
     private Vector2 direction;
     public Sprite otwartaKlapa;
+    public Rigidbody2D rb;
 
     private void Start(){
         klapa = GameObject.FindGameObjectWithTag("Klapa");        
@@ -47,8 +48,16 @@ public class Boss1 : MonoBehaviour{
     }
     private void animate()
     {
-        anim.SetFloat("X", direction.x);
-        anim.SetFloat("Y", direction.y);
+        if(rb){
+            if (rb.velocity.x != 0 || rb.velocity.y != 0){
+                anim.SetFloat("X", rb.velocity.x);
+                anim.SetFloat("Y", rb.velocity.y);
+                anim.SetBool("isMoving", true);
+            }
+            else{
+                anim.SetBool("isMoving", false);
+            }
+        }
     }
 
     private void OnDestroy(){
