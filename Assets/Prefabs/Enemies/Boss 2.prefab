@@ -106,7 +106,7 @@ MonoBehaviour:
   moveSpeed: 0
   damage: 1
   canMove: 0
-  rb: {fileID: 0}
+  rb: {fileID: -783591889351372197}
   anim: {fileID: 6653078080187072654}
 --- !u!50 &-783591889351372197
 Rigidbody2D:

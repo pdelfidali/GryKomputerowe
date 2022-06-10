@@ -2646,7 +2646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811992761149, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811992761149, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3468,7 +3468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811992761149, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811992761149, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9584,9 +9584,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.021911789, y: -0.46023792}
-  m_Size: {x: 0.5754816, y: 0.2102057}
-  m_Direction: 1
+  m_Offset: {x: 0.028584935, y: 0.026859827}
+  m_Size: {x: 0.9175089, y: 1.184413}
+  m_Direction: 0
 --- !u!1 &1200338773
 GameObject:
   m_ObjectHideFlags: 0
@@ -11969,7 +11969,7 @@ Transform:
   - {fileID: 125558805}
   - {fileID: 54637288}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1516622639
 GameObject:
@@ -14405,7 +14405,7 @@ Transform:
   - {fileID: 596277491}
   - {fileID: 1926881325}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1897436206
 PrefabInstance:
@@ -14917,7 +14917,7 @@ MonoBehaviour:
   rightClosed: {fileID: 8398414690192744627, guid: 0f726840603c74c4cb884ba504a9d988, type: 3}
   closedRoom: {fileID: 537548642043389353, guid: 819475a5f3016094a961564b4121655b, type: 3}
   waitTime: 4
-  boss: {fileID: 1268695114772217291, guid: d6c509ff4f9fbe748b0724743c91db58, type: 3}
+  boss: {fileID: 1268695114772217291, guid: c9bdb111ac4fc47418f683921463e2b0, type: 3}
   boss2: {fileID: 1268695114772217291, guid: d6c509ff4f9fbe748b0724743c91db58, type: 3}
   levelList:
     list:
@@ -16135,7 +16135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811992761149, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1537774811992761149, guid: 163907b2dc84ecd49a4300d03327c0f6, type: 3}
       propertyPath: m_LocalPosition.x

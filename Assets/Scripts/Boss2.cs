@@ -19,6 +19,7 @@ public class Boss2 : MonoBehaviour{
         playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         source = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
         background = GameObject.FindGameObjectWithTag("BackgroundAudio").GetComponent<AudioSource>();
+        StartCoroutine(Run());
     }
 
     public void Activate(){
@@ -39,4 +40,6 @@ public class Boss2 : MonoBehaviour{
         playerRB.gameObject.GetComponent<PlayerShooting>().bossesKilled += 1;
         background.Play();
     }
+    
+    
 }
